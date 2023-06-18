@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">intents_exercise</string>
+    <string name="dayBtn">Day</string>
+    <string name="monthBtn">Month</string>
+    <string name="yearBtn">Year</string>
+    <string name="eventBtn">Add Event</string>
 </resources>
