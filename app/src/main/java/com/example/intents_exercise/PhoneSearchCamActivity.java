@@ -7,26 +7,33 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.provider.MediaStore;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PhoneSearchActivity extends AppCompatActivity {
+public class PhoneSearchCamActivity extends AppCompatActivity {
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
     private Button search_btn;
     private Button dial_btn;
     private EditText search_text;
     private EditText phone_number;
+    private Button cam_btn;
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.phone_search);
+        setContentView(R.layout.phone_search_cam);
 
         search_btn = findViewById(R.id.search_button);
         dial_btn = findViewById(R.id.dial_button);
         search_text = findViewById(R.id.query_field);
         phone_number = findViewById(R.id.phone_number_field);
 
+        cam_btn = findViewById(R.id.create_note_button);
+
         search_btn.setOnClickListener(v -> setSearch_btn());
         dial_btn.setOnClickListener(v -> setDial_btn());
+        cam_btn.setOnClickListener(v -> setVideo_Cam_btn());
     }
 
 
@@ -63,6 +70,11 @@ public class PhoneSearchActivity extends AppCompatActivity {
             dialPhoneNumber(phoneNumber);
         }
     }
+
+    private void setVideo_Cam_btn() {
+        Video_Mode_Camera();
+    }
+
     public void dialPhoneNumber(String phoneNumber) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:" + phoneNumber));
@@ -72,6 +84,10 @@ public class PhoneSearchActivity extends AppCompatActivity {
     public void searchWeb(String query) {
         Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
         intent.putExtra(SearchManager.QUERY, query);
+        startActivity(intent);
+    }
+    public void Video_Mode_Camera() {
+        Intent intent = new Intent(MediaStore.INTENT_ACTION_VIDEO_CAMERA);
         startActivity(intent);
     }
 }
