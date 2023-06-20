@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">intents_exercise</string>
+    <string name="BtnName">Open Map</string>
 </resources>
