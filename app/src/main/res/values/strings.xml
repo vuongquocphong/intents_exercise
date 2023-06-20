@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">intents_exercise</string>
+    <string name="btn">Retrieve Photo</string>
+    <string name="imgName">Image</string>
     <string name="BtnName">Open Map</string>
 </resources>
