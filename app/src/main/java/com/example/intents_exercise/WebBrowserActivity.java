@@ -9,13 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class WebBrowserActivity extends AppCompatActivity {
     Button getWeb;
     EditText et_data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.web_browser);
         getWeb = findViewById(R.id.GetWeb);
         et_data = findViewById(R.id.LinkEnter);
         getWeb.setOnClickListener(new View.OnClickListener() {
