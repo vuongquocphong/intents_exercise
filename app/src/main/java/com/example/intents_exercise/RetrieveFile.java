@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class RetrieveFile extends AppCompatActivity {
 
     private ImageView imageView;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.display_file_layout);
 
         Button btnRetrieve = findViewById(R.id.btnRetrieve);
         imageView = findViewById(R.id.imageView);
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 assert data != null;
                 Uri selectedImageUri = data.getData();
                 try {
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(MainActivity.this.getContentResolver(), selectedImageUri);
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(RetrieveFile.this.getContentResolver(), selectedImageUri);
                     imageView.setImageBitmap(bitmap);
                 } catch (IOException e) {
                     e.printStackTrace();
