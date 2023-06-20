@@ -10,12 +10,12 @@ import android.widget.EditText;
 
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class EventAdder extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.event_add_layout);
 
         EditText day = findViewById(R.id.editTextDay);
         EditText month = findViewById(R.id.editTextMonth);
