@@ -1,7 +1,6 @@
 package com.example.intents_exercise;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.ButtonBarLayout;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,14 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class TextMessageActivity extends AppCompatActivity {
 
     Button btnMessage;
     EditText et;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.text_message_activity);
         btnMessage = findViewById(R.id.btn_message);
         et = findViewById(R.id.Message);
         btnMessage.setOnClickListener(new View.OnClickListener() {
