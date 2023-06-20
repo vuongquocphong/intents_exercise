@@ -7,12 +7,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class LocationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.location_layout);
 
         Button launch_btn = findViewById(R.id.btnOpenMap);
         launch_btn.setOnClickListener(view -> {
